@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>نکسورا شاپ | فروشگاه آنلاین</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-top">
+
+      <a href="index.html" class="logo">
+        نکسورا<span>شاپ</span>
+      </a>
+
+      <form class="search-box" id="searchForm">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="جستجو در نکسورا شاپ..."
+        />
+        <button type="submit">جستجو</button>
+      </form>
+
+      <div class="header-actions">
+        <a href="#" class="login-btn">ورود / ثبت‌نام</a>
+
+        <button class="cart-btn" id="cartButton" type="button">
+          سبد خرید
+          <span id="cartCount">۰</span>
+        </button>
+      </div>
+
+    </div>
+
+    <nav class="main-nav">
+      <div class="container nav-list">
+        <a href="#">همه دسته‌بندی‌ها</a>
+        <a href="#">موبایل</a>
+        <a href="#">لپ‌تاپ</a>
+        <a href="#">لوازم جانبی</a>
+        <a href="#">خانه و آشپزخانه</a>
+        <a href="#">گیمینگ</a>
+        <a href="#">پیشنهاد ویژه</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="container hero-section">
+      <div class="hero-content">
+        <span class="hero-badge">پیشنهاد ویژه امروز</span>
+
+        <h1>
+          خرید راحت، سریع و مطمئن از نکسورا شاپ
+        </h1>
+
+        <p>
+          فروشگاه آنلاین نکسورا شاپ، یک نمونه‌کار سبک و ریسپانسیو برای نمایش محصولات دیجیتال، لوازم جانبی و کالاهای پرطرفدار است.
+        </p>
+
+        <a href="#products" class="primary-btn">مشاهده محصولات</a>
+      </div>
+
+      <div class="hero-offer-box">
+        <span>تخفیف تا</span>
+        <strong>۴۰٪</strong>
+        <p>روی کالاهای منتخب</p>
+      </div>
+    </section>
+
+    <section class="container services-section">
+      <div class="service-card">
+        <strong>ارسال سریع</strong>
+        <span>تحویل سریع سفارش‌ها</span>
+      </div>
+
+      <div class="service-card">
+        <strong>ضمانت اصالت</strong>
+        <span>کالاهای معتبر و مطمئن</span>
+      </div>
+
+      <div class="service-card">
+        <strong>پرداخت امن</strong>
+        <span>خرید آسان و مطمئن</span>
+      </div>
+
+      <div class="service-card">
+        <strong>پشتیبانی</strong>
+        <span>همراه شما در خرید</span>
+      </div>
+    </section>
+
+    <section class="container categories-section">
+      <div class="section-heading">
+        <h2>دسته‌بندی‌های محبوب</h2>
+        <a href="#">مشاهده همه</a>
+      </div>
+
+      <div class="categories-grid">
+        <button class="category-card" data-category="all">همه محصولات</button>
+        <button class="category-card" data-category="mobile">موبایل</button>
+        <button class="category-card" data-category="laptop">لپ‌تاپ</button>
+        <button class="category-card" data-category="accessory">لوازم جانبی</button>
+        <button class="category-card" data-category="home">خانه و آشپزخانه</button>
+        <button class="category-card" data-category="gaming">گیمینگ</button>
+      </div>
+    </section>
+
+    <section class="container products-section" id="products">
+      <div class="section-heading">
+        <h2>محصولات پیشنهادی</h2>
+
+        <select id="sortProducts">
+          <option value="default">مرتب‌سازی پیش‌فرض</option>
+          <option value="cheap">ارزان‌ترین</option>
+          <option value="expensive">گران‌ترین</option>
+          <option value="discount">بیشترین تخفیف</option>
+        </select>
+      </div>
+
+      <div class="shop-layout">
+
+        <aside class="filters-box">
+          <h3>فیلتر محصولات</h3>
+
+          <div class="filter-group">
+            <label for="categoryFilter">دسته‌بندی</label>
+            <select id="categoryFilter">
+              <option value="all">همه محصولات</option>
+              <option value="mobile">موبایل</option>
+              <option value="laptop">لپ‌تاپ</option>
+              <option value="accessory">لوازم جانبی</option>
+              <option value="home">خانه و آشپزخانه</option>
+              <option value="gaming">گیمینگ</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="priceFilter">حداکثر قیمت</label>
+            <input
+              type="range"
+              id="priceFilter"
+              min="1000000"
+              max="100000000"
+              value="100000000"
+            />
+            <span id="priceValue">۱۰۰,۰۰۰,۰۰۰ تومان</span>
+          </div>
+
+          <button class="reset-btn" id="resetFilters" type="button">
+            حذف فیلترها
+          </button>
+        </aside>
+
+        <div class="products-grid" id="productsGrid">
+          <!-- محصولات با JavaScript ساخته می‌شوند -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3>سبد خرید</h3>
+      <button id="closeCart" type="button">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">سبد خرید شما خالی است.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>مجموع:</span>
+        <strong id="cartTotal">۰ تومان</strong>
+      </div>
+
+      <button class="checkout-btn" type="button">
+        ادامه خرید
+      </button>
+    </div>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+
+      <div class="footer-about">
+        <h3>نکسورا شاپ</h3>
+        <p>
+          نکسورا شاپ یک فروشگاه آنلاین نمونه است که با HTML، CSS و JavaScript طراحی شده و برای نمایش در نمونه‌کار استفاده می‌شود.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>دسترسی سریع</h4>
+        <a href="#">درباره ما</a>
+        <a href="#">تماس با ما</a>
+        <a href="#">قوانین خرید</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>خدمات مشتریان</h4>
+        <a href="#">راهنمای خرید</a>
+        <a href="#">پیگیری سفارش</a>
+        <a href="#">سوالات متداول</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© ۱۴۰۵ تمام حقوق برای نکسورا شاپ محفوظ است.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
